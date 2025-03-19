@@ -179,6 +179,19 @@
             background-color: #FFFFFF;
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const oldVersion = urlParams.get('oldVersion');
+
+            if (oldVersion === 'true') {
+                const chipArea = document.querySelector('.chip-area.section.bg-white');
+                if (chipArea) {
+                    chipArea.style.display = 'none';
+                }
+            }
+        });
+    </script>
 </head>
 <body>
 <div class="wrapper">
